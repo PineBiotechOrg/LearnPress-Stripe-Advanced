@@ -1,0 +1,61 @@
+#learn-press-stripe-form{
+    padding: 20px 20px 0px 20px;
+    background: #FFF;
+    border: 1px solid #DDD;
+    margin: 20px 0;
+}
+.learn-press-form-row.has-error label,
+.learn-press-form-row.has-error label .required{
+    color: #cc1600;
+}
+.learn-press-form-row.has-error input,
+.learn-press-form-row.has-error select{
+    border-color: #cc1600;
+}
+
+.coupon-code-button.loading,
+.button.loading {
+    filter: alpha(opacity=70);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    -webkit-opacity: .7;
+    -khtml-opacity: .7;
+    -moz-opacity: .7;
+    -ms-opacity: .7;
+    -o-opacity: .7;
+    opacity: .7;
+    position: relative;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.coupon-code-button.loading::after,
+.button.loading::after {
+    -webkit-animation: fa-spin 1s infinite steps(8);
+    animation: fa-spin 1s infinite steps(8);
+    content: "\f110";
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    -webkit-transition: none;
+    -khtml-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+    font-size: 18px;
+    font-family: FontAwesome;
+    position: absolute;
+    left: 50%;
+    color: #fff;
+    top: 8px;
+    margin-left: -12px;
+}
+
+.coupon-savings {
+	margin-left: 1em;
+}
+
+#learn-press-payment-method-stripe label {
+	visibility: hidden;
+	display: none;
+}
