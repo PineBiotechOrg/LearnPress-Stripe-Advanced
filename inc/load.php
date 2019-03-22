@@ -68,6 +68,7 @@ if ( ! class_exists( 'LP_Addon_Stripe_Payment' ) ) {
 			// add payment gateway class
 			add_filter( 'learn_press_payment_method', array( $this, 'add_payment' ) );
 			add_filter( 'learn-press/payment-methods', array( $this, 'add_payment' ) );
+			//add_filter( 'learn_press_get_return_url', array( $this, 'lp_project_order_received' ), 10, 2 );
 
 			$this->coupon_codes = learn_press_get_coupon_codes();
 
@@ -184,6 +185,18 @@ if ( ! class_exists( 'LP_Addon_Stripe_Payment' ) ) {
 					'success'					=> true
 				)
 			);
+
+		}
+
+		public function lp_project_order_received( $return_url, $order ) {
+
+			if( $order ) {
+
+				return $return_url;
+
+			}
+
+			return $return_url;
 
 		}
 
