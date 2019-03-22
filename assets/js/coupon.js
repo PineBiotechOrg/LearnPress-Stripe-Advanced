@@ -49,7 +49,6 @@
 	                	$( this ).data( 'applied_coupon', false );
 	                    $coupon_code_btn.removeClass('loading');
 	                },
-	                dataType: 'html',
 	                success: function (response) {
 
 	                	response = LearnPress.parseJSON(response);
